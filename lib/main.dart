@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_native_sample/data/repository/mock_sensor_repository_impl.dart';
-import 'package:flutter_native_sample/data/repository/mock_todo_repository_impl.dart';
 import 'package:flutter_native_sample/presentation/main/main_screen.dart';
 import 'package:flutter_native_sample/presentation/main/main_view_model.dart';
 
+import 'data/repository/sensor_repository_impl.dart';
 import 'data/repository/todo_repository_impl.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   final viewModel = MainViewModel(
       TodoRepositoryImpl(),
-      MockSensorRepositoryImpl(),
+      SensorRepositoryImpl(),
   );
 
   MyApp({super.key});
