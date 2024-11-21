@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_sample/data/repository/mock_sensor_repository_impl.dart';
 import 'package:flutter_native_sample/data/repository/mock_todo_repository_impl.dart';
 import 'package:flutter_native_sample/presentation/main/main_screen.dart';
 import 'package:flutter_native_sample/presentation/main/main_view_model.dart';
@@ -12,7 +13,7 @@ void main() {
 class MyApp extends StatelessWidget {
   final viewModel = MainViewModel(
       TodoRepositoryImpl(),
-
+      MockSensorRepositoryImpl(),
   );
 
   MyApp({super.key});

@@ -15,7 +15,9 @@ class MainViewModel with ChangeNotifier {
   MainViewModel(
     this._todoRepository,
     this._sensorRepository,
-  );
+  ) {
+    startSensing();
+  }
 
   void startSensing() {
     _sensorRepository.sensorEventStream().listen((values) {

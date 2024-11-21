@@ -28,6 +28,7 @@ class MainScreen extends StatelessWidget {
             state.isLoading
                 ? const Text('로딩중!!!')
                 : Text(state.todo.toString()),
+            Text('${state.values}'),
           ],
         ),
       ),
