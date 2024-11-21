@@ -6,10 +6,7 @@ class MainViewModel with ChangeNotifier {
   final TodoRepository _repository;
 
   // 상태
-  MainState _state = const MainState(
-    todo: null,
-    isLoading: false,
-  );
+  MainState _state = const MainState();
 
   MainState get state => _state;
 
