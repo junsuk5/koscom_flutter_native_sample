@@ -3,12 +3,14 @@ import 'package:flutter_native_sample/data/repository/mock_todo_repository_impl.
 import 'package:flutter_native_sample/presentation/main/main_screen.dart';
 import 'package:flutter_native_sample/presentation/main/main_view_model.dart';
 
+import 'data/repository/todo_repository_impl.dart';
+
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final viewModel = MainViewModel(MockTodoRepositoryImpl());
+  final viewModel = MainViewModel(TodoRepositoryImpl());
 
   MyApp({super.key});
 
