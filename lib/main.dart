@@ -10,7 +10,10 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final viewModel = MainViewModel(TodoRepositoryImpl());
+  final viewModel = MainViewModel(
+      TodoRepositoryImpl(),
+
+  );
 
   MyApp({super.key});
 
